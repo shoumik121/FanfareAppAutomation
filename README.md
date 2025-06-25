@@ -1,115 +1,3 @@
-
-Allure report
-
-After successful test execution:
-
-Generate Allure Report: 
-$allure generate target/allure-results --clean
-
-Serve Allure Report:
-$allure serve target/allure-results
-
-**alternative**
-Generate and Serve Allure Report:
-
-$mvn allure:report
-$mvn allure:serve
-
-
-
-
-********************************************************
-
-**Upgrade appium** >> npm i -g appium@latest
-
-**Upgrade uiautomator2** >> appium driver update uiautomator2
-
-example: driver uiautomator2 updated: 3.5.2 => 3.7.9
-         driver flutter updated: 2.6.0 => 2.9.2
-
-Installation Guide:
-
-set environment variables and set path
-[
-Android Sdk!
-java Sdk!
-maven!
-appium inspector
-bundletool (optional) etc
-]
-
-run this in terminal to check if emulator device is setup or not
->>%ANDROID_HOME%\platform-tools\adb devices
-(in this pc "C:\Users\TalentPro\AppData\Local\Android\Sdk\platform-tools\adb devices")
-
-check driver command
->>appium driver doctor uiautomator2
-
-my machine NodeExePath
->>C:\Program Files\nodejs\
-
-my machine NodeMainJsPath [ make sure it is the the one "\appium\build\lib"]
->>C:\Users\TalentPro\AppData\Roaming\npm\node_modules\appium\build\lib
-
-$ appium driver list
-✔ Listing available drivers
-- uiautomator2@2.42.1 [installed (npm)]
-- xcuitest [not installed]
-- mac2 [not installed]
-- espresso [not installed]
-- safari [not installed]
-- gecko [not installed]
-- chromium [not installed]
-
-drivers update command
->>appium driver list
->>appium driver list --updates
-
-appium-doctor
->>npm install -g appium-doctor
->>appium-doctor --version
-
-download & install Appium Inspector
->>https://github.com/appium/appium-inspector/releases
->>https://inspector.appiumpro.com/
-
-Env setup for Android
-note: AppData is hidden folder
-
-Directly add into path
->>C:\Users\TalentPro\AppData\Local\Android\Sdk\build-tools
->>C:\Users\TalentPro\AppData\Local\Android\Sdk\platform-tools
->>C:\Users\TalentPro\AppData\Local\Android\Sdk\tools
->>C:\Users\TalentPro\AppData\Local\Android\Sdk\platforms
-
-To check setup for Android
->>adb
-
-make shortcut for Android-studio windows-batch-files
->>C:\Program Files\Android\Android Studio\bin
-
-example:
-Created device 1
->>Pixel 5 API 33 (6 inch)
->>Android 13.0x86_64
-
-Created device 2
->>Pixel 2 API 27
->>Android 8.1 x86
-
-appPackage/appAcƟvity:
->>adb shell dumpsys window windows | grep mFocusedApp
-
-appium:appPackage
->>build.gradle
-
-appium:appActivity
->>app/src/main/AndroidManifest.xml
-
-driverUpdate:
-appium driver update uiautomator2
-
-
 💥Appium Flutter Driver using Appium Java Client💦
 
 [medium]
@@ -307,5 +195,117 @@ identifier: '${title} show all',
 - Platform and version under test: Windows 11
 - Real device or emulator/simulator: Xiaomi Note 10 (2gb)
 
-    RUN APPIUM CMD>               
+    RUN APPIUM CMD>
+
+Important Info!!!      
+
+Allure report
+
+After successful test execution:
+
+Generate Allure Report: 
+$allure generate target/allure-results --clean
+
+Serve Allure Report:
+$allure serve target/allure-results
+
+**alternative**
+Generate and Serve Allure Report:
+
+$mvn allure:report
+$mvn allure:serve
+
+
+
+
+********************************************************
+
+**Upgrade appium** >> npm i -g appium@latest
+
+**Upgrade uiautomator2** >> appium driver update uiautomator2
+
+example: driver uiautomator2 updated: 3.5.2 => 3.7.9
+         driver flutter updated: 2.6.0 => 2.9.2
+
+Installation Guide:
+
+set environment variables and set path
+[
+Android Sdk!
+java Sdk!
+maven!
+appium inspector
+bundletool (optional) etc
+]
+
+run this in terminal to check if emulator device is setup or not
+>>%ANDROID_HOME%\platform-tools\adb devices
+(in this pc "C:\Users\TalentPro\AppData\Local\Android\Sdk\platform-tools\adb devices")
+
+check driver command
+>>appium driver doctor uiautomator2
+
+my machine NodeExePath
+>>C:\Program Files\nodejs\
+
+my machine NodeMainJsPath [ make sure it is the the one "\appium\build\lib"]
+>>C:\Users\TalentPro\AppData\Roaming\npm\node_modules\appium\build\lib
+
+$ appium driver list
+✔ Listing available drivers
+- uiautomator2@2.42.1 [installed (npm)]
+- xcuitest [not installed]
+- mac2 [not installed]
+- espresso [not installed]
+- safari [not installed]
+- gecko [not installed]
+- chromium [not installed]
+
+drivers update command
+>>appium driver list
+>>appium driver list --updates
+
+appium-doctor
+>>npm install -g appium-doctor
+>>appium-doctor --version
+
+download & install Appium Inspector
+>>https://github.com/appium/appium-inspector/releases
+>>https://inspector.appiumpro.com/
+
+Env setup for Android
+note: AppData is hidden folder
+
+Directly add into path
+>>C:\Users\TalentPro\AppData\Local\Android\Sdk\build-tools
+>>C:\Users\TalentPro\AppData\Local\Android\Sdk\platform-tools
+>>C:\Users\TalentPro\AppData\Local\Android\Sdk\tools
+>>C:\Users\TalentPro\AppData\Local\Android\Sdk\platforms
+
+To check setup for Android
+>>adb
+
+make shortcut for Android-studio windows-batch-files
+>>C:\Program Files\Android\Android Studio\bin
+
+example:
+Created device 1
+>>Pixel 5 API 33 (6 inch)
+>>Android 13.0x86_64
+
+Created device 2
+>>Pixel 2 API 27
+>>Android 8.1 x86
+
+appPackage/appAcƟvity:
+>>adb shell dumpsys window windows | grep mFocusedApp
+
+appium:appPackage
+>>build.gradle
+
+appium:appActivity
+>>app/src/main/AndroidManifest.xml
+
+driverUpdate:
+appium driver update uiautomator2        
 appium --log-level debug
